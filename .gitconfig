@@ -9,7 +9,7 @@
 
 # core {{{
 [core]
-    editor = /usr/bin/vim
+    editor = vim
     pager=less -x4
 
 #}}}
