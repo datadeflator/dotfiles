@@ -58,6 +58,10 @@
     cp = cherry-pick
     gr = grep -Ii
     # }}}
+    # fetch {{{
+    fo = fetch origin
+    fu = fetch upstream
+    # }}}
     # tweak defaults {{{
     diff = diff --word-diff
     branch = branch -ra
@@ -159,6 +163,6 @@
     # }}}
 # }}}
 [rebase]
-  autosquash = true
+    autosquash = true
 [rerere]
 	enabled = true
