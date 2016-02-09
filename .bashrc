@@ -1,6 +1,7 @@
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
+alias ack='ack --color'
 alias ll='ls -lhA'
 
 set -o vi
