@@ -11,6 +11,7 @@
 [core]
     editor = vim
     pager=less -x4
+    excludesfile = /Users/glew4/.gitignore
 
 #}}}
 # color {{{
