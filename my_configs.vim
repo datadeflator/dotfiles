@@ -17,4 +17,13 @@ let g:airline#extensions#tabline#enabled = 1
 " configure whether buffer numbers should be shown
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
+" switching to the previously edited buffer
+map <leader>1 :b#<CR>
+" switch to previous buffer
+map <leader>2 :bprev<CR>
+" switch to next buffer
+map <leader>3 :bnext<CR>
+" delete buffer
+map <leader>4 :bd<CR>
+
 autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2
