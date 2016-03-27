@@ -11,3 +11,5 @@ unmap <c-b>
 
 " stop highlighting search matches
 nnoremap <leader><space> :nohlsearch<CR>
+
+autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2
