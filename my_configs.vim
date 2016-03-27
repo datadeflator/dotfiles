@@ -12,4 +12,9 @@ unmap <c-b>
 " stop highlighting search matches
 nnoremap <leader><space> :nohlsearch<CR>
 
+" https://github.com/vim-airline/vim-airline#smarter-tab-line
+let g:airline#extensions#tabline#enabled = 1
+" configure whether buffer numbers should be shown
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
 autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2
