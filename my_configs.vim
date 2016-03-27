@@ -8,3 +8,6 @@ endfunction
 let g:ctrlp_map = '<leader>t'
 " restore <c-b> for page up
 unmap <c-b>
+
+" stop highlighting search matches
+nnoremap <leader><space> :nohlsearch<CR>
