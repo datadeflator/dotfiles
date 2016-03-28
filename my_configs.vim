@@ -16,6 +16,8 @@ nnoremap <leader><space> :nohlsearch<CR>
 let g:airline#extensions#tabline#enabled = 1
 " configure whether buffer numbers should be shown
 let g:airline#extensions#tabline#buffer_nr_show = 1
+" :t - Tail of the file name (last component of the name) - :help filename-modifiers
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " switching to the previously edited buffer
 map <leader>1 :b#<CR>
