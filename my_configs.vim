@@ -1,5 +1,8 @@
 " ~/.vim_runtime/my_configs.vim for: https://github.com/amix/vimrc
 
+" I actually like backslash over comma for leader
+let mapleader="\\"
+
 " redefined from vimrcs/filetypes.vim due to switching buffers resetting folding
 function! JavaScriptFold()
 endfunction
