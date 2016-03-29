@@ -31,4 +31,9 @@ map <leader>3 :bnext<CR>
 " delete buffer
 map <leader>4 :bd<CR>
 
+" display line numbers
+set number
+" toggle line numbers
+nmap <C-N><C-N> :set invnumber<CR>
+
 autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2
