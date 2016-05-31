@@ -24,8 +24,10 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 
 " switching to the previously edited buffer
 map <leader>1 :b#<CR>
+au FileType python map <buffer> <leader>1 :b#<CR>
 " switch to previous buffer
 map <leader>2 :bprev<CR>
+au FileType python map <buffer> <leader>2 :bprev<CR>
 " switch to next buffer
 map <leader>3 :bnext<CR>
 " delete buffer
