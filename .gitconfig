@@ -60,8 +60,8 @@
     gr = grep -Ii
     # }}}
     # fetch {{{
-    fo = fetch origin
-    fu = fetch upstream
+    fo = fetch origin --prune
+    fu = fetch upstream --prune
     # }}}
     # tweak defaults {{{
     diff = diff --word-diff
