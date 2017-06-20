@@ -86,6 +86,8 @@
     lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
     fl = log -u
     filelog = log -u
+    lg = git log --graph --pretty=oneline --abbrev-commit
+    lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
     # }}}
     # diff {{{
     d = diff --word-diff
