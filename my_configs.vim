@@ -53,3 +53,6 @@ endif
 if executable(local_flow)
   let g:flow#flowpath = local_flow
 endif
+
+" https://github.com/flowtype/vim-flow
+let g:flow#enable = 1
