@@ -39,3 +39,17 @@ set number
 nmap <C-N><C-N> :set invnumber<CR>
 
 autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2
+
+let g:syntastic_java_checkers=['']
+let g:syntastic_javascript_checkers=['eslint']
+
+" https://github.com/flowtype/vim-flow/issues/24
+" https://github.com/flowtype/vim-flow/issues/60
+"Use locally installed flow
+let local_flow = finddir('node_modules', '.;') . '/.bin/flow'
+if matchstr(local_flow, "^\/\\w") == ''
+    let local_flow= getcwd() . "/" . local_flow
+endif
+if executable(local_flow)
+  let g:flow#flowpath = local_flow
+endif
