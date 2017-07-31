@@ -42,6 +42,7 @@ autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2
 
 let g:syntastic_java_checkers=['']
 let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_javascript_eslint_exec = './node_modules/.bin/eslint'
 
 " https://github.com/flowtype/vim-flow/issues/24
 " https://github.com/flowtype/vim-flow/issues/60
