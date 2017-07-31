@@ -57,3 +57,4 @@ endif
 
 " https://github.com/flowtype/vim-flow
 let g:flow#enable = 1
+let g:flow#autoclose = 1
