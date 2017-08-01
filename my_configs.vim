@@ -81,3 +81,14 @@ map <leader>f :echo system("./node_modules/.bin/flow coverage " . expand("%:p"))
 "   let {+command = g:flow#flowpath . ' --json'+}
 " {+  let output = system(command)+}
 " {+  "let+} output = system('flow --json')
+"   let dict = json_decode(output)
+" 
+"   let lines = []
+" @@ -119,6 +121,8 @@ function! flow#typecheck()
+"     endif
+" 
+"     let &errorformat = old_errorformat
+"   {+else+}
+" {+    cclose+}
+"   endif
+" endfunction
