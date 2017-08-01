@@ -61,3 +61,23 @@ let g:flow#autoclose = 1
 
 " flow coverage for current file
 map <leader>f :echo system("./node_modules/.bin/flow coverage " . expand("%:p"))<CR>
+
+" NOTE: using danihodovic's fix-error-format branch (https://github.com/flowtype/vim-flow/issues/11) + below patch
+" diff --git i/plugin/flow.vim w/plugin/flow.vim
+" index 208040b..67ef4b5 100644
+" --- i/plugin/flow.vim
+" +++ w/plugin/flow.vim
+" @@ -85,14 +85,16 @@ function! Format_json_error_msg(error)
+"         \)
+"   " The error message is most informative when all the message.descr are concatenated
+"   for message in a:error.message
+"     let str .= {+message.context . ' ' .+} message.descr . ' '
+"   endfor
+"   return str
+" endfunction
+" 
+" " Main interface functions.
+" function! flow#typecheck()
+"   let {+command = g:flow#flowpath . ' --json'+}
+" {+  let output = system(command)+}
+" {+  "let+} output = system('flow --json')
