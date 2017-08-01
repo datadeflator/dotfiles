@@ -58,3 +58,6 @@ endif
 " https://github.com/flowtype/vim-flow
 let g:flow#enable = 1
 let g:flow#autoclose = 1
+
+" flow coverage for current file
+map <leader>f :echo system("./node_modules/.bin/flow coverage " . expand("%:p"))<CR>
