@@ -11,16 +11,10 @@ endfunction
 let g:ctrlp_map = '<leader>t'
 " restore <c-b> for page up
 unmap <c-b>
+set showtabline=0
 
 " stop highlighting search matches
 nnoremap <leader><space> :nohlsearch<CR>
-
-" https://github.com/vim-airline/vim-airline#smarter-tab-line
-let g:airline#extensions#tabline#enabled = 1
-" configure whether buffer numbers should be shown
-let g:airline#extensions#tabline#buffer_nr_show = 1
-" :t - Tail of the file name (last component of the name) - :help filename-modifiers
-let g:airline#extensions#tabline#fnamemod = ':t'
 
 " switching to the previously edited buffer
 map <leader>1 :b#<CR>
@@ -92,3 +86,8 @@ map <leader>f :echo system("./node_modules/.bin/flow coverage " . expand("%:p"))
 " {+    cclose+}
 "   endif
 " endfunction
+
+
+" Plugins to clone into ~/.vim_runtime/sources_non_forked
+" https://github.com/danihodovic/vim-flow/
+" https://github.com/weynhamz/vim-plugin-minibufexpl
