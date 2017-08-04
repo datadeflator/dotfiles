@@ -11,7 +11,9 @@ endfunction
 let g:ctrlp_map = '<leader>t'
 " restore <c-b> for page up
 unmap <c-b>
-set showtabline=0
+
+" https://stackoverflow.com/questions/21945700/vim-autocommand-on-buffer-load-file-open
+autocmd BufReadPre,FileReadPre * :set showtabline=0
 
 " stop highlighting search matches
 nnoremap <leader><space> :nohlsearch<CR>
