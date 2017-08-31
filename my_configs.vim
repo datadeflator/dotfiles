@@ -89,6 +89,17 @@ map <leader>f :echo system("./node_modules/.bin/flow coverage " . expand("%:p"))
 "   endif
 " endfunction
 
+" https://github.com/itchyny/lightline.vim/issues/87
+let g:lightline = {
+  \ 'active': {
+  \   'left': [['mode', 'paste'], ['fugitive', 'readonly', 'relativepath', 'modified']],
+  \   'right': [['lineinfo'], ['percent']]
+  \ },
+  \ 'component_function': {
+  \   'fugitive': 'fugitive#head'
+  \ }
+  \ }
+
 
 " Plugins to clone into ~/.vim_runtime/sources_non_forked
 " https://github.com/danihodovic/vim-flow/
