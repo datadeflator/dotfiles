@@ -107,3 +107,4 @@ let g:lightline = {
 " Plugins to clone into ~/.vim_runtime/sources_non_forked
 " https://github.com/weynhamz/vim-plugin-minibufexpl
 " https://github.com/ekalinin/Dockerfile.vim
+" https://github.com/elixir-editors/vim-elixir
