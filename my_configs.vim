@@ -41,6 +41,8 @@ autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2
 let g:syntastic_java_checkers=['']
 let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_javascript_eslint_exec = './node_modules/.bin/eslint'
+let g:syntastic_typescript_checkers=['eslint']
+let g:syntastic_typescript_eslint_exec = './node_modules/.bin/eslint'
 
 " git blame
 map <leader>g :Gblame<CR>
