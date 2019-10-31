@@ -110,3 +110,4 @@ let g:lightline = {
 " https://github.com/weynhamz/vim-plugin-minibufexpl
 " https://github.com/ekalinin/Dockerfile.vim
 " https://github.com/elixir-editors/vim-elixir
+" https://github.com/leafgarland/typescript-vim
