@@ -59,8 +59,8 @@ let g:lightline = {
   \ }
 
 
-" Plugins to clone into ~/.vim_runtime/sources_non_forked
-" https://github.com/weynhamz/vim-plugin-minibufexpl
+" Plugins to clone into ~/.vim_runtime/my_plugins
 " https://github.com/ekalinin/Dockerfile.vim
 " https://github.com/elixir-editors/vim-elixir
-" https://github.com/leafgarland/typescript-vim
+" https://github.com/ludovicchabant/vim-gutentags
+" https://github.com/weynhamz/vim-plugin-minibufexpl
