@@ -45,7 +45,15 @@ let g:syntastic_typescript_checkers=['eslint']
 let g:syntastic_typescript_eslint_exec = './node_modules/.bin/eslint'
 
 " git blame
-map <leader>g :Gblame<CR>
+" https://stackoverflow.com/a/53481161
+function! s:ToggleGblame()
+  if &l:filetype ==# 'fugitiveblame'
+    close
+  else
+    Gblame
+  endif
+endfunction
+map <leader>g :call <SID>ToggleGblame()<CR>
 
 " https://github.com/itchyny/lightline.vim/issues/87
 let g:lightline = {
