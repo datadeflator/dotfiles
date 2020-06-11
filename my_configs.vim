@@ -11,8 +11,6 @@ endfunction
 let g:ctrlp_map = '<leader>t'
 " https://github.com/kien/ctrlp.vim/issues/58#issuecomment-42743551
 let g:ctrlp_custom_ignore = '\v[\/](node_modules)|(\.(DS_Store|git|coffee|beam))$'
-" restore <c-b> for page up
-unmap <c-b>
 
 " https://stackoverflow.com/questions/21945700/vim-autocommand-on-buffer-load-file-open
 autocmd BufReadPre,FileReadPre * :set showtabline=0
