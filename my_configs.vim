@@ -105,9 +105,9 @@ let g:ale_linters_explicit = 1
 let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
 
-noremap <Leader>ad :ALEGoToDefinition<CR>
-nnoremap <leader>af :ALEFix<cr>
-noremap <Leader>ar :ALEFindReferences<CR>
+noremap <Leader>d :ALEHover<CR>
+noremap <Leader>f :ALEFindReferences<CR>
+noremap <Leader>g :ALEGoToDefinition<CR>
 " Move between linting errors
 nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>
