@@ -54,15 +54,63 @@ endfunction
 map <leader>g :call <SID>ToggleGblame()<CR>
 
 " https://github.com/itchyny/lightline.vim/issues/87
+" https://github.com/maximbaz/lightline-ale#integration
 let g:lightline = {
   \ 'active': {
   \   'left': [['mode', 'paste'], ['fugitive', 'readonly', 'relativepath', 'modified']],
-  \   'right': [['lineinfo'], ['percent']]
+  \   'right': [['linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok'], ['lineinfo'], ['percent']]
+  \ },
+  \ 'component_expand' :{
+  \   'linter_checking': 'lightline#ale#checking',
+  \   'linter_infos': 'lightline#ale#infos',
+  \   'linter_warnings': 'lightline#ale#warnings',
+  \   'linter_errors': 'lightline#ale#errors',
+  \   'linter_ok': 'lightline#ale#ok'
   \ },
   \ 'component_function': {
   \   'fugitive': 'fugitive#head'
+  \ },
+  \ 'component_type': {
+  \   'linter_checking': 'right',
+  \   'linter_infos': 'right',
+  \   'linter_warnings': 'warning',
+  \   'linter_errors': 'error',
+  \   'linter_ok': 'right'
   \ }
   \ }
+
+
+" https://www.rockyourcode.com/developing-with-elixir-in-vim/
+let g:ale_elixir_elixir_ls_release = $HOME . '/workspace/elixir-ls/release'
+
+let g:ale_linters = {
+\   'elixir': ['elixir-ls'],
+\}
+let g:ale_fixers = {
+\   'elixir': ['mix_format'],
+\}
+let g:ale_elixir_elixir_ls_config = {
+\   'elixirLS': {
+\     'dialyzerEnabled': v:false,
+\   },
+\}
+
+let g:ale_completion_enabled = 1
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
+let g:ale_lint_on_enter = 0
+highlight ALEErrorSign ctermbg=NONE ctermfg=red
+highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+let g:ale_linters_explicit = 1
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
+
+noremap <Leader>ad :ALEGoToDefinition<CR>
+nnoremap <leader>af :ALEFix<cr>
+noremap <Leader>ar :ALEFindReferences<CR>
+" Move between linting errors
+nnoremap ]r :ALENextWrap<CR>
+nnoremap [r :ALEPreviousWrap<CR>
 
 
 " Plugins to clone into ~/.vim_runtime/my_plugins
@@ -70,4 +118,6 @@ let g:lightline = {
 " https://github.com/elixir-editors/vim-elixir
 " https://github.com/jremmen/vim-ripgrep
 " https://github.com/ludovicchabant/vim-gutentags (brew install ctags)
+" https://github.com/maximbaz/lightline-ale
+" https://github.com/tpope/vim-endwise
 " https://github.com/weynhamz/vim-plugin-minibufexpl
