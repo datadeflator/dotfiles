@@ -36,12 +36,6 @@ nmap <C-N><C-N> :set invnumber<CR>
 
 autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2
 
-let g:syntastic_java_checkers=['']
-let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_javascript_eslint_exec = './node_modules/.bin/eslint'
-let g:syntastic_typescript_checkers=['eslint']
-let g:syntastic_typescript_eslint_exec = './node_modules/.bin/eslint'
-
 " git blame
 " https://stackoverflow.com/a/53481161
 function! s:ToggleGblame()
@@ -85,9 +79,13 @@ let g:ale_elixir_elixir_ls_release = $HOME . '/workspace/elixir-ls/release'
 
 let g:ale_linters = {
 \   'elixir': ['elixir-ls'],
+\   'javascript': ['eslint'],
+\   'typescript': ['eslint'],
 \}
 let g:ale_fixers = {
 \   'elixir': ['mix_format'],
+\   'javascript': ['prettier', 'eslint'],
+\   'typescript': ['prettier', 'eslint'],
 \}
 let g:ale_elixir_elixir_ls_config = {
 \   'elixirLS': {
