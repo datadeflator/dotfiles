@@ -9,3 +9,5 @@ Session.vim
 *~
 # ctags
 tags
+tags.lock
+tags.temp
