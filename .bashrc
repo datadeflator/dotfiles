@@ -13,4 +13,5 @@ fi
 # rg glob options
 # https://stackoverflow.com/a/55796978
 bind '"zc": "-g '"'*.cpp'"'"'
+bind '"ze": "-g '"'*.ex*'"'"'
 bind '"zt": "-g '"'*.cpp ' -g '\!*.t.cpp'"'"'
