@@ -36,6 +36,7 @@ nmap <C-N><C-N> :set invnumber<CR>
 
 autocmd FileType css setlocal shiftwidth=2 softtabstop=2 tabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType typescript setlocal shiftwidth=2 softtabstop=2 tabstop=2
 
 " git blame
 " https://stackoverflow.com/a/53481161
@@ -46,7 +47,7 @@ function! s:ToggleGblame()
     Gblame
   endif
 endfunction
-map <leader>g :call <SID>ToggleGblame()<CR>
+map <leader>b :call <SID>ToggleGblame()<CR>
 
 " https://github.com/itchyny/lightline.vim/issues/87
 " https://github.com/maximbaz/lightline-ale#integration
@@ -110,6 +111,7 @@ noremap <Leader>g :ALEGoToDefinition<CR>
 " Move between linting errors
 nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>
+" NOTE: :ALEDetail to see long errors
 
 
 " Plugins to clone into ~/.vim_runtime/my_plugins
