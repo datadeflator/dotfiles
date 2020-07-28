@@ -115,6 +115,10 @@ nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>
 
 
+" https://medium.com/@chamilad/haproxy-config-syntax-highlighting-987fd9ca56be
+au BufRead,BufNewFile haproxy* set ft=haproxy
+
+
 " Plugins to clone into ~/.vim_runtime/my_plugins
 " https://github.com/ekalinin/Dockerfile.vim
 " https://github.com/elixir-editors/vim-elixir
