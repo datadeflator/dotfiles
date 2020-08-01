@@ -125,5 +125,6 @@ au BufRead,BufNewFile haproxy* set ft=haproxy
 " https://github.com/jremmen/vim-ripgrep
 " https://github.com/ludovicchabant/vim-gutentags (brew install ctags)
 " https://github.com/maximbaz/lightline-ale
+" https://github.com/pearofducks/ansible-vim
 " https://github.com/tpope/vim-endwise
 " https://github.com/weynhamz/vim-plugin-minibufexpl
