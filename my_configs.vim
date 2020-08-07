@@ -122,6 +122,7 @@ au BufRead,BufNewFile haproxy* set ft=haproxy
 " Plugins to clone into ~/.vim_runtime/my_plugins
 " https://github.com/ekalinin/Dockerfile.vim
 " https://github.com/elixir-editors/vim-elixir
+" https://github.com/hashivim/vim-terraform
 " https://github.com/jremmen/vim-ripgrep
 " https://github.com/ludovicchabant/vim-gutentags (brew install ctags)
 " https://github.com/maximbaz/lightline-ale
