@@ -88,6 +88,7 @@
     fl = log -u
     filelog = log -u
     lg = log --graph --pretty=oneline --abbrev-commit
+    lg25 = log --graph --pretty=oneline --abbrev-commit -25
     lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
     # }}}
     # diff {{{
