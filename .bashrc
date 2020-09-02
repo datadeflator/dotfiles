@@ -2,6 +2,7 @@ export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 alias ll='ls -lhA'
+alias rg="rg --hidden --glob '!.git'"
 
 set -o vi
 
