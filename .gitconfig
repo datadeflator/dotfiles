@@ -13,6 +13,7 @@
     pager=less -x4
     excludesfile = ~/.gitignore
     abbrev = 7
+	precomposeUnicode = true
 
 #}}}
 # color {{{
