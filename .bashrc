@@ -10,9 +10,3 @@ set -o vi
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
-
-# rg glob options
-# https://stackoverflow.com/a/55796978
-bind '"zc": "-g '"'*.cpp'"'"'
-bind '"ze": "-g '"'*.ex*'"'"'
-bind '"zt": "-g '"'*.cpp ' -g '\!*.t.cpp'"'"'
